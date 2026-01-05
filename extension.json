@@ -3,7 +3,7 @@
   "name": "ERB::Formatter",
   "organization": "Gilbert Guttmann",
   "description": "Format ERB files using ERB::Formatter.",
-  "version": "1.1.1",
+  "version": "1.2",
   "categories": ["commands", "formatters"],
   "repository": "https://github.com/gttmnn/erb-formatter.novaextension",
   "bugs": "https://github.com/gttmnn/erb-formatter.novaextension/issues",
@@ -54,7 +54,7 @@
       "title": "Executable Path",
       "type": "path",
       "default": "",
-      "description": "Path to the ERB::Formatter executable for this workspace."
+      "description": "Path to the ERB::Formatter executable. Will override the global default."
     },
     {
       "key": "gttmnn.erb-formatter.tailwindOutputPath",
@@ -72,8 +72,14 @@
         ["enabled", "Enable"],
         ["disabled", "Disable"]
       ],
-      "default": "global",
-      "description": "Configure format on save behavior for this workspace."
+      "default": "global"
+    },
+    {
+      "key": "gttmnn.erb-formatter.excludePatterns",
+      "title": "Exclude Patterns",
+      "type": "stringArray",
+      "default": [],
+      "description": "Glob patterns to exclude files from formatting."
     }
   ]
 }
